@@ -7,12 +7,12 @@ AStack    ENDS
 DATA SEGMENT
 ; Данные PC
     TYPE_PC 			db 'Type: PC',0DH,0AH,'$'
-    XT_TYP 				db 'Type: PC/XT',0DH,0AH,'$'
-    AT_TYP 				db 'Type: AT',0DH,0AH,'$'
+    XT_TYP 			db 'Type: PC/XT',0DH,0AH,'$'
+    AT_TYP 			db 'Type: AT',0DH,0AH,'$'
     PS2_MODEL_M_30 		db 'Type: PS2 model 30',0DH,0AH,'$'
     PS2_MODEL_M_50_60 	db 'Type: PS2 model 50 or 60',0DH,0AH,'$'
     PS2_MODEL_M_80 		db 'Type: PS2 model 80',0DH,0AH,'$'
-    JR_TYP 				db 'Type: PСjr',0DH,0AH,'$'
+    JR_TYP 			db 'Type: PСjr',0DH,0AH,'$'
     CONV_TYP 			db 'Type: PC Convertible',0DH,0AH,'$'
 
 ; Данные MS_DOS
@@ -172,9 +172,9 @@ DEFINE_OS_VER PROC near
 	mov si, offset VERSIONS
 	add si, 16
 	call BYTE_TO_DEC
-    pop ax
-    mov al, ah
-    add si, 3
+    	pop ax
+    	mov al, ah
+    	add si, 3
 	call BYTE_TO_DEC
 	mov dx, offset VERSIONS
 	call MYPRINT
