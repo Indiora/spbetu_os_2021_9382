@@ -115,7 +115,7 @@ LEAVE_LOOP:
     iret
 
 INTERRURTT endp
-
+LASTT:
 MYPRINT proc near
     push ax
     mov ah, 9h
@@ -285,7 +285,6 @@ ALREADYLOAD:
 EXIT:
     mov ah, 4ch
     int 21h
-LASTT:
 MAIN endp
 CODE ends
 
