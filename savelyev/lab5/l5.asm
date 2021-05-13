@@ -25,8 +25,9 @@ IDATA:
     keep_ss dw 0
     keep_sp dw 0
     key_value db 0
-    new_stack dw 256 dup(0)
     sign dw 1388h
+    new_stack dw 64 dup(0)
+    
 
 GOO:
     mov keep_ax, ax
@@ -35,7 +36,7 @@ GOO:
     mov ax, seg new_stack
     mov ss, ax
     mov ax, offset new_stack
-    add ax, 256
+    add ax, 128
     mov sp, ax
 
     push ax
